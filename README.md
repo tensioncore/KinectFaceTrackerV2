@@ -21,6 +21,12 @@ The original tracker proved that Kinect head tracking was possible — but it al
 
 This is not a feature-piled rewrite — it is a **carefully engineered rebuild** that prioritizes correctness, resilience, and clarity.
 
+**v2.1 TO-DO**
+
+The implementation of the settings is a work in progress, and is not fully integrated on the function side of things, but its not stopping the GUI - and checkbox settings and ip/port settings do save properly. 
+
+**Currently not working:** Run at Startup, Auto-start Tracking and auto-start UDP stream. These settings will be saved but do nothing yet (I'm working on it).
+
 ---
 
 ## Core Design Principles
