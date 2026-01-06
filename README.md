@@ -90,6 +90,13 @@ This is for you.
 This project is a fork and evolution of the original Magic Mau Kinect Head Tracker.
 Significant architectural, stability, and usability improvements have been made.
 
+## Building from Source
+
+If you want to build the project yourself (dependencies, SDK links, MSBuild commands),
+see:
+
+👉 [build_readme.md](build_readme.md)
+
 ## Precompiled Installer
 
 A precompiled, code-signed Windows installer is available for convenience at:
