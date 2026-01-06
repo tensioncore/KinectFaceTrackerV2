@@ -1,18 +1,104 @@
-# KinectFaceTracker
-C++ solution to have a DLL that provides head tracking info from an Xbox360 Kinect to OpenTrack
+# Kinect Head Tracker v2.1
 
-This is a simple implementation, based on a Kinect SDK sample, but it does the job. 
-There is still some leftover code from the example, pardon the mess :)
+Kinect Head Tracker v2.1 is a **modern, stability-first rewrite** of the classic Kinect head-tracking concept, designed for **long-running simulation use** and **serious rigs**.
 
-KinectFaceTracker.dll exposes a couple methods:
+This project began as a fork of the original Magic Mau's Kinect Head Tracker, but has since evolved into a **fully streamlined, hardened application** with a strong focus on reliability, safety, and usability.
 
-* `Start(int port)` - this starts the tracker and sends output on the specified UDP port. This allows OpenTrack to receive the data with the "UDP sender" input.
-* `Stop()` - stops the tracker
-* `TiltCamera(int angleDelta)` - allows you to tilt the camera up or down to give it a proper view of your head
-* `IsReceivingData()` - tells you if the tracker is tracking a head (returns a bool)
+---
 
-I have tried to tweak the app to use as minimum resources as possible while still providing a smooth head tracking experience.
-My C++ skills are limited though, so if you can improve, I'm all for it.
+## Why v2.1?
 
-In order to run the app you will also need the FaceTrack dlls that are in the dependencies folder. 
-Those DLLs come from the Kinect 1.8 SDK Developer Toolkit and perform the actual magic of head tracking. 
+The original tracker proved that Kinect head tracking was possible — but it also carried years of technical debt:
+- Unused and legacy code paths
+- Memory instability over long sessions
+- Fragile recovery when tracking was lost
+- Limited quality-of-life features
+- Unclear and finicky UI options
+
+**v2.1 fixes that foundation.**
+
+This is not a feature-piled rewrite — it is a **carefully engineered rebuild** that prioritizes correctness, resilience, and clarity.
+
+---
+
+## Core Design Principles
+
+### 🧠 Stability First
+Built to run for hours without degradation. No creeping memory usage, no gradual failure modes.
+
+### 🔁 Graceful Recovery
+If face tracking is lost, the system recovers automatically — no restarts, no lockups, no frozen output.
+
+### 🧱 Clean Architecture
+Tracking logic is fully isolated from networking and transport layers, keeping the core engine predictable and safe.
+
+### 🛡 Memory Safety
+Safe managed/unmanaged image handling eliminates common Kinect crashes and GDI+ failures seen in older implementations.
+
+---
+
+## Features
+
+### 🎯 Accurate Head Tracking
+- Smooth, consistent pose output
+- Designed for simulation and camera-driven environments
+
+### 🌐 Optional Network Streaming
+- UDP output for use with OpenTrack or custom pipelines
+- Explicit start/stop control (never forced)
+
+### ⚙️ Full Settings System (v2.1)
+- Run on Windows startup
+- Auto-start engine and streaming
+- Persistent window position
+- Configurable network settings - Allowing network data for advanced setups
+- Sensible defaults with advanced control available
+
+### 🖥 Polished Desktop UI
+- Minimal, focused interface
+- Clear engine and streaming state
+- Designed to stay out of your way during use
+
+---
+
+## Built for Long Sessions
+
+This tracker is intended for:
+- Driving simulators
+- Flight simulators
+- Virtual camera rigs
+- Dedicated head-tracking machines
+
+It has been tested under **extended continuous operation**, with safeguards specifically designed to prevent the slow failures common in older Kinect tools.
+
+---
+
+## Who Is This For?
+
+If you want:
+- A **set-and-forget** Kinect head tracker
+- Something that doesn’t require babysitting
+- Clean code you can understand and extend, or just build and use it!
+- A tool that behaves like professional software
+
+This is for you.
+
+---
+
+## License & Credits
+
+This project is a fork and evolution of the original Magic Mau Kinect Head Tracker.
+Significant architectural, stability, and usability improvements have been made.
+
+## Precompiled Installer
+
+A precompiled, code-signed Windows installer is available for convenience at:
+
+👉 [Link not yet available: see https://nickdodd.com for updates until thr link is ready]
+
+This installer is optional and provided for users who prefer a ready-to-run build.
+The full source code remains available in this repository.
+
+---
+
+Enjoy stable Kinect V1 head tracking! 
