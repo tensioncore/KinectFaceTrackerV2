@@ -1,4 +1,6 @@
-# Kinect Head Tracker v2.1
+<p align="center">
+  <img src="app_gui.png" width="600">
+</p>
 
 Kinect Head Tracker v2.1 is a **modern, stability-first rewrite** of the classic Kinect head-tracking concept, designed for **long-running simulation use** and **serious rigs**.
 
