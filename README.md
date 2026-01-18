@@ -109,7 +109,7 @@ see:
 
 A precompiled, code-signed Windows installer is available for convenience at:
 
-👉 [Link not yet available: see https://nickdodd.com for updates until thr link is ready]
+👉 https://www.nickdodd.com/downloads/kinect-head-tracker
 
 This installer is optional and provided for users who prefer a ready-to-run build.
 The full source code remains available in this repository.
